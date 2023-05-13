@@ -1,7 +1,8 @@
 import { NextPage } from 'next';
+import { Layout } from '../components';
 
 const Home: NextPage = () => {
-  return <div className="h-screen w-screen font-bold flex flex-col justify-center items-center">It&apos;s the begining...</div>;
+  return <Layout>Dashboard Page</Layout>;
 };
 
 export default Home;

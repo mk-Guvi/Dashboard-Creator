@@ -4,29 +4,8 @@ module.exports = {
   darkMode: 'media', // or 'media' or 'class'
   theme: {
     extend: {
-      boxShadow: {
-        warningDanger: '0px 0px 0px 2px rgba(250, 82, 82, 0.3)',
-        warningPrimary: '0px 0px 0px 2px rgba(51, 154, 240, 0.3)',
-        alertPrimary: '0px 0px 2px rgba(12, 45, 75, 0.2)',
-        alertSecondary: '0px 1px 10px rgba(50, 60, 71, 0.1)',
-        questions: '0px 0px 0px 2px rgba(51, 154, 240, 0.3)',
-        alert: ' 0px 0px 2px rgba(0, 0, 0, 0.2), 0px 2px 10px rgba(0, 0, 0, 0.1);',
-        depth0: ['inset 0px 2px 0px rgba(0, 0, 0, 0.05)'],
-        depth1: ['0px 1px 0px rgba(0, 0, 0, 0.05)'],
-        depth2: ['0px 2px 1px rgba(0, 0, 0, 0.05)', '0px 0px 1px rgba(0, 0, 0, 0.25)'],
-        depth3: ['0px 0px 2px rgba(0, 0, 0, 0.2), 0px 2px 10px rgba(0, 0, 0, 0.1)'],
-        depth4: ['0px 2px 1px rgba(0, 0, 0, 0.05), 0px 0px 1px rgba(0, 0, 0, 0.25)'],
-        depth5: ['0px 0px 4px rgba(0, 0, 0, 0.1), 0px 8px 40px rgba(0, 0, 0, 0.2)'],
-        CTA: ['0px 1px 0px rgba(0, 0, 0, 0.08), inset 0px -1px 0px rgba(0, 0, 0, 0.2)'],
-        card: ['0px 0px 1px 0px rgba(0, 0, 0, 0.25)', '0px 2px 1px 0px rgba(0, 0, 0, 0.05)'],
-      },
-
       colors: {
-        primary: '#053F5C',
-        cta: '#228BE6',
-        success: '#12B886',
-        warning: '#FD7E14',
-        danger: '#FA5252',
+        layout: '#F5F5F5',
         gray: {
           50: '#F8F9FA',
           100: '#F1F3F5',
