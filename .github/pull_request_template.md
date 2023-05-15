@@ -9,8 +9,3 @@
 - [ ] Other
 
 ### Description
-
-<!-- Please give a detailed breif about the things that are done in this PR
-Paste the User Story for the features:
--->
-

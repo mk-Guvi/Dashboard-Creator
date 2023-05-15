@@ -59,9 +59,12 @@ function CardItem(props: CardItemsPropsT) {
   };
 
   return (
-    <div className={`rounded-lg  lg:w-2/12  md:w-2/5 w-full      flex flex-col  h-fit break-all  min-w-[10rem] p-4 ${className || ''}`}>
+    <div
+      className={`rounded-lg m-auto lg:w-[20%]  md:w-5/12 w-full      flex flex-col  h-fit break-all  min-w-[10rem] p-4 ${
+        className || ''
+      }`}>
       {icon ? (
-        <div className="h-7 w-7 place-self-end">
+        <div className="h-7 w-7  place-self-end">
           <Icon
             icon={state?.error ? 'refresh-cw' : icon}
             className={`p-1 h-full w-full ${state?.error ? 'cursor-pointer ' : ''}`}

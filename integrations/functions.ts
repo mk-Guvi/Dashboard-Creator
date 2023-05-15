@@ -8,3 +8,15 @@ export const BackendGet = async (url: string, data?: any) => {
     .then((e) => e)
     .catch((e) => e);
 };
+
+export const BackendPost = async (url: string, data?: any) => {
+  return await fetch(url, {
+    method: 'post',
+    body: JSON.stringify(data),
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+  })
+    .then((e) => e.json())
+    .catch((e) => e);
+};

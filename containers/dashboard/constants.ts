@@ -15,7 +15,7 @@ export const AllCardsEntities: CardEntityTypeT[] = [
     type: 'CARD',
   },
   {
-    className: 'bg-[#F4ECDD] ',
+    className: 'bg-[#F4ECDD]  ',
     label: 'Total Transactions',
     icon: 'tags',
     url: '',
@@ -24,7 +24,7 @@ export const AllCardsEntities: CardEntityTypeT[] = [
   },
 
   {
-    className: 'bg-[#EFDADA]',
+    className: 'bg-[#EFDADA] ',
     label: 'Total Likes',
     icon: 'thumbs-up',
     url: '',
@@ -40,19 +40,19 @@ export const AllCardsEntities: CardEntityTypeT[] = [
     type: 'CARD',
   },
   {
-    className: 'w-11/12  h-72 rounded   bg-white',
+    className: 'w-full  h-72 rounded   bg-white',
     label: 'Activities',
     value: 'ACTIVITIES',
     type: 'ACTIVITIES',
   },
   {
-    className: 'rounded-md   lg:w-5/12 w-11/12   min-h-52 max-h-fit bg-white',
+    className: 'rounded-md   lg:w-[48.5%] w-full   min-h-52 max-h-fit bg-white',
     label: 'Top Sales',
     value: 'TOP_SALES',
     type: 'SALES',
   },
   {
-    className: 'rounded-md   lg:w-5/12 w-11/12 min-h-52 max-h-fit bg-white',
+    className: 'rounded-md   lg:w-[48.5%] w-full min-h-52 max-h-fit bg-white',
     label: "Today's Schedules",
     value: 'SCHEDULES',
     type: 'SCHEDULES',

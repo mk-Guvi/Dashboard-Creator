@@ -6,6 +6,7 @@ module.exports = {
     './containers/**/*.{js,ts,jsx,tsx}',
     './node_modules/@tremor/**/*.{js,ts,jsx,tsx}',
   ],
+
   darkMode: 'media', // or 'media' or 'class'
   theme: {
     extend: {

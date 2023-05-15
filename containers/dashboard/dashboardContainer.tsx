@@ -107,8 +107,8 @@ function Dashboard() {
     }
   }, []);
   return (
-    <div className="h-full w-full   flex flex-col gap-10 px-4">
-      <header className="flex items-center  py-3 gap-3 flex-wrap w-full">
+    <div className="h-full w-full   flex flex-col   gap-5 items-center ">
+      <header className="flex items-center  py-3 gap-3 flex-wrap w-11/12">
         <H3 className="flex-1">Dashboard</H3>
         <div className="w-[13rem]">
           <InputField
@@ -131,7 +131,7 @@ function Dashboard() {
       </header>
 
       {state?.allEntities?.length ? (
-        <section className="flex flex-wrap justify-around   gap-5">
+        <section className="flex flex-wrap pb-5 w-11/12  h-fu  gap-8">
           {state?.allEntities?.map((each) => {
             return each.type === 'CARD' ? (
               <CardItem
