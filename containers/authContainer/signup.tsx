@@ -73,12 +73,12 @@ export const Signup = () => {
   return (
     <Container>
       <AuthLayout>
-        <div className="flex  flex-col gap-1">
+        <div className="flex  flex-col space-y-1">
           <h1 className="font-bold text-3xl">Sign Up</h1>
           <p className="text-xs">Create a new account</p>
         </div>
 
-        <form className=" rounded-lg shadow-lg bg-white flex flex-col gap-3 p-6" onSubmit={formik.handleSubmit}>
+        <form className=" rounded-lg shadow-lg bg-white flex flex-col space-y-3 p-6" onSubmit={formik.handleSubmit}>
           <div>
             <label className="font-normal text-xs" htmlFor="username">
               Username

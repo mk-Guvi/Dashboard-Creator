@@ -13,7 +13,7 @@
 }
 
 .button_custom {
-  @apply w-full border py-2 flex justify-center items-center gap-2 text-gray-700 bg-white rounded-xl hover:bg-gray-100 hover:text-gray-700;
+  @apply w-full border py-2 flex justify-center items-center space-x-2 text-gray-700 bg-white rounded-xl hover:bg-gray-100 hover:text-gray-700;
 }
 
 .input_group {

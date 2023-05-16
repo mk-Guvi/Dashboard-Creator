@@ -11,6 +11,7 @@ import { useRouter } from 'next/router';
 
 import { AuthLayout, Container, LoaderSvg } from '../../components';
 
+import { SmallText, Text } from '../../components/typography';
 import GoogleSvg from '../../public/assets/google-icon.svg';
 import styles from '../../styles/Form.module.css';
 import { validateLoginInputs } from './helper';
@@ -59,9 +60,9 @@ export const Login = () => {
           <p className="text-xs">Sign in to your account</p>
         </div>
         <button type="button" className={styles.button_custom} onClick={handleGoogleSignin}>
-          <Image src={GoogleSvg.src} width="17" className="mt-1" height={'17'} alt="Google" /> Sign In with Google
+          <Image src={GoogleSvg.src} width="17" height={'17'} alt="Google" /> <Text>Sign In With Google</Text>
         </button>
-        <form onSubmit={formik.handleSubmit} className=" rounded-lg shadow-lg bg-white flex flex-col gap-3 p-6">
+        <form onSubmit={formik.handleSubmit} className=" rounded-lg shadow-lg bg-white flex flex-col space-y-2 p-6">
           <div>
             <label className="font-normal text-xs" htmlFor="email">
               Email address
@@ -104,7 +105,7 @@ export const Login = () => {
               <span className="text-red-700">{formik?.errors?.password}</span>
             ) : null}
           </div>
-          <p className="text-xs text-blue-700 font-normal">Forget Password?</p>
+          <SmallText className=" text-blue-700 ">Forget Password?</SmallText>
 
           <button
             type="submit"

@@ -110,7 +110,7 @@ function Dashboard() {
     }
   }, []);
   return (
-    <div className="h-full w-full   flex flex-col   gap-5 items-center ">
+    <div className="h-full w-full   flex flex-col   space-y-1 items-center ">
       <header className="flex items-center  py-3 gap-3 flex-wrap w-[95%]">
         <H3 className="flex-1">Dashboard</H3>
         <div className="w-[13rem]">
@@ -159,7 +159,7 @@ function Dashboard() {
       </header>
 
       {state?.allEntities?.length ? (
-        <section className="flex flex-wrap pb-5 w-[95%]  h-full  gap-8">
+        <section className="flex flex-wrap pb-5 w-[95%]  h-full  space-y-2">
           {state?.allEntities?.map((each) => {
             return each.type === 'CARD' ? (
               <CardItem
