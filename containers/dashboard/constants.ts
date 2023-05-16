@@ -46,13 +46,13 @@ export const AllCardsEntities: CardEntityTypeT[] = [
     type: 'ACTIVITIES',
   },
   {
-    className: 'rounded-md   lg:w-[48.5%] w-full   min-h-52 max-h-fit bg-white',
+    className: 'rounded-md   lg:w-[46.5%] m-auto w-full   min-h-52 max-h-fit bg-white',
     label: 'Top Sales',
     value: 'TOP_SALES',
     type: 'SALES',
   },
   {
-    className: 'rounded-md   lg:w-[48.5%] w-full min-h-52 max-h-fit bg-white',
+    className: 'rounded-md   lg:w-[46.5%] m-auto w-full min-h-52 max-h-fit bg-white',
     label: "Today's Schedules",
     value: 'SCHEDULES',
     type: 'SCHEDULES',

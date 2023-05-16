@@ -1,7 +1,8 @@
 import { DonutChart } from '@tremor/react';
 import moment from 'moment';
 import React, { useEffect, useState } from 'react';
-import { LoaderSvg } from '../../components/loaders/CircularLoader';
+import { LoaderSvg } from '../../components';
+
 import { ExtraSmallText, H3, SmallText, Text } from '../../components/typography';
 import { GetCardDetailsResponseT } from './cardItem';
 

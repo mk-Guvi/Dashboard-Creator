@@ -30,6 +30,10 @@
   src: local('Inter'), url('/fonts/Inter/Inter-Regular.ttf') format('truetype');
 }
 
+:root {
+  overflow-x: hidden;
+}
+
 html,
 body {
   padding: 0;

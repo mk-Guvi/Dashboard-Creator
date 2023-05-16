@@ -1,4 +1,4 @@
-type LoaderSvgPropsT = { type?: 'PRIMARY' | 'SECONDARY'; className?: string; size?: string };
+export type LoaderSvgPropsT = { type?: 'PRIMARY' | 'SECONDARY'; className?: string; size?: string };
 export const LoaderSvg = (props: LoaderSvgPropsT) => {
   return (
     <svg

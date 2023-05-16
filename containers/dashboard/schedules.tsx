@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import { LoaderSvg } from '../../components/loaders/CircularLoader';
+import { LoaderSvg } from '../../components';
+
 import { ExtraSmallText, H5, H6 } from '../../components/typography';
 import { GetCardDetailsResponseT } from './cardItem';
 
@@ -39,7 +40,7 @@ export const Schedules = ({ getCardDetails }: { getCardDetails: () => Promise<Ge
     setState((prevState) => ({ ...prevState, ...payload }));
   };
   return state?.loading ? (
-    <div className="h-full justify-center flex items-center">
+    <div className="h-40 justify-center flex items-center">
       <LoaderSvg size="10" type="SECONDARY" />
     </div>
   ) : (

@@ -2,7 +2,8 @@ import { LineChart } from '@tremor/react';
 
 import moment from 'moment';
 import React, { useEffect, useState } from 'react';
-import { LoaderSvg } from '../../components/loaders/CircularLoader';
+import { LoaderSvg } from '../../components';
+
 import { ExtraSmallText, H5, H6 } from '../../components/typography';
 import { GetCardDetailsResponseT } from './cardItem';
 // import { CartesianGrid, Dot, Legend, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
@@ -57,8 +58,9 @@ export const Activities = ({ getCardDetails }: { getCardDetails: () => Promise<G
           colors={['emerald', 'gray']}
           curveType="natural"
           autoFocus={false}
+          translate="no"
           yAxisWidth={40}
-          showAnimation={true}
+          showAnimation={false}
         />
       </div>
     </div>
