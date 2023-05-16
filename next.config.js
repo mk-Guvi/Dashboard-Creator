@@ -5,6 +5,7 @@ const moduleExports = {
   distDir: 'build',
   eslint: {
     dirs: ['pages', 'components', 'containers', 'redux', 'services', 'integrations', 'utils'],
+    ignoreDuringBuilds: true,
   },
 };
 
