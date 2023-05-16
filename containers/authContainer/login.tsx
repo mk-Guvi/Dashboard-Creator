@@ -9,8 +9,9 @@ import { useFormik } from 'formik';
 import { signIn } from 'next-auth/react';
 import { useRouter } from 'next/router';
 import { LoaderSvg } from '../../components/loaders/CircularLoader';
-import AuthLayout from '../../components/SharedComponents/AuthLayout';
-import Container from '../../components/SharedComponents/Container';
+
+import { AuthLayout, Container } from '../../components';
+
 import GoogleSvg from '../../public/assets/google-icon.svg';
 import styles from '../../styles/Form.module.css';
 import { validateLoginInputs } from './helper';

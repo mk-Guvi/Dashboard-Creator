@@ -5,7 +5,6 @@ type ContainerPropsT = {
   children?: ReactNode | null;
 };
 
-function Container(props: ContainerPropsT) {
+export const Container = (props: ContainerPropsT) => {
   return <div className={`${props?.className || ''} h-screen w-screen overflow-auto`}>{props?.children}</div>;
-}
-export default Container;
+};

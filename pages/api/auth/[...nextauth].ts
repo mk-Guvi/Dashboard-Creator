@@ -9,6 +9,9 @@ export default NextAuth({
   pages: {
     signOut: '/',
   },
+  session: {
+    maxAge: 604800, // Set the session max age to 7 days (604,800 seconds)
+  },
   providers: [
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID!,

@@ -7,9 +7,9 @@ import { signIn } from 'next-auth/react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
+import { AuthLayout, Container } from '../../components';
 import { LoaderSvg } from '../../components/loaders/CircularLoader';
-import AuthLayout from '../../components/SharedComponents/AuthLayout';
-import Container from '../../components/SharedComponents/Container';
+
 import { ApiEndpoints } from '../../constants';
 import { BackendPost } from '../../integrations';
 import styles from '../../styles/Form.module.css';

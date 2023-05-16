@@ -4,7 +4,7 @@ type AuthLayoutPropsT = {
   children: ReactNode;
 };
 
-function AuthLayout(props: AuthLayoutPropsT) {
+export const AuthLayout = (props: AuthLayoutPropsT) => {
   return (
     <div className=" bg-slate-50  h-full w-full grid lg:grid-cols-2">
       <div className="hidden  bg-black text-white justify-center lg:flex items-center ">
@@ -13,6 +13,4 @@ function AuthLayout(props: AuthLayoutPropsT) {
       <div className="p-4  grid m-auto gap-3   sm:w-[25rem]">{props?.children}</div>
     </div>
   );
-}
-
-export default AuthLayout;
+};
