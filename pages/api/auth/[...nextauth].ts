@@ -5,7 +5,7 @@ import GoogleProvider from 'next-auth/providers/google';
 import { connectMongo, UsersModel } from '../../../database';
 
 export default NextAuth({
-  secret: process.env?.NEXTAUTH_SECRET,
+  secret: process.env?.AUTH_SECRET,
   pages: {
     signOut: '/',
   },
