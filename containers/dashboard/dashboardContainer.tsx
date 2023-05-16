@@ -159,7 +159,7 @@ function Dashboard() {
       </header>
 
       {state?.allEntities?.length ? (
-        <section className="flex flex-wrap pb-5 w-[95%]  h-full  space-y-2">
+        <section className="flex flex-wrap pb-5 w-[95%]  h-full  gap-x-10 gap-y-6">
           {state?.allEntities?.map((each) => {
             return each.type === 'CARD' ? (
               <CardItem
