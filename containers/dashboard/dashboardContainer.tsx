@@ -1,7 +1,8 @@
-import Image from 'next/image';
+import { signOut, useSession } from 'next-auth/react';
 import { useCallback, useEffect, useState } from 'react';
 import { Icon, InputField } from '../../components';
-import { H3, H4 } from '../../components/typography';
+import Tooltip from '../../components/sharedComps/ToolTip';
+import { H3, H4, Text } from '../../components/typography';
 import { BackendGet } from '../../integrations';
 import AvatarImage from '../../public/assets/avatar-image.svg';
 import { getRandomNumber, searchValue, suspendApi, useDebounce } from '../../utils';
@@ -16,6 +17,8 @@ export type DashboardStateT = {
   allEntities: CardEntityTypeT[];
 };
 function Dashboard() {
+  const { data: session } = useSession();
+
   const [state, setState] = useState<DashboardStateT>({
     search: '',
     allEntities: [...AllCardsEntities],
@@ -126,8 +129,33 @@ function Dashboard() {
         </div>
 
         <Icon icon="bell" />
-
-        <Image src={AvatarImage.src} alt={'profile'} width={25} height={25} className="rounded-full object-cover h-8 w-8" />
+        <Tooltip
+          content={
+            <div className="w-fit min-h-20 p-4 text-black bg-white shadow rounded flex flex-col items-center justify-center gap-1">
+              <img
+                src={session?.user?.image || AvatarImage.src}
+                alt={'profile'}
+                width={25}
+                height={25}
+                className="rounded-full object-cover h-8 w-8"
+              />
+              <Text>{session?.user?.name || 'Name Not Found'}</Text>
+            </div>
+          }>
+          <img
+            onClick={() =>
+              signOut({
+                callbackUrl: '/login',
+              })
+            }
+            src={session?.user?.image || AvatarImage.src}
+            alt={'profile'}
+            width={25}
+            height={25}
+            title="Logout"
+            className="rounded-full cursor-pointer object-cover h-8 w-8"
+          />
+        </Tooltip>
       </header>
 
       {state?.allEntities?.length ? (
