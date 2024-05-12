@@ -3,10 +3,10 @@ import { AiFillEyeInvisible } from '@react-icons/all-files/ai/AiFillEyeInvisible
 import { HiAtSymbol } from '@react-icons/all-files/hi/HiAtSymbol';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { useFormik } from 'formik';
-import { signIn } from 'next-auth/react';
+import { signIn, useSession } from 'next-auth/react';
 import { useRouter } from 'next/router';
 
 import { AuthLayout, Container, LoaderSvg } from '../../components';
@@ -17,6 +17,7 @@ import styles from '../../styles/Form.module.css';
 import { validateLoginInputs } from './helper';
 
 export const Login = () => {
+  const { data: session, status } = useSession();
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
@@ -46,12 +47,47 @@ export const Login = () => {
     }
   }
 
+  // const handleGoogleSignin = async () => {
+  //   await signIn('google', {
+  //     callbackUrl: 'http://localhost:3000',
+  //     redirect: true,
+  //   });
+  // };
   const handleGoogleSignin = async () => {
+    // Call signIn and get the response
     await signIn('google', {
       callbackUrl: 'http://localhost:3000',
-      redirect: true,
+      redirect: false, // Set redirect to false to get the sign-in URL without redirecting
+      intent: 'external', // Specify that the action should be treated as an external intent
     });
   };
+
+  const popupCenter = () => {
+    const dualScreenLeft = window.screenLeft ?? window.screenX;
+    const dualScreenTop = window.screenTop ?? window.screenY;
+
+    const width = window.innerWidth ?? document.documentElement.clientWidth ?? screen.width;
+
+    const height = window.innerHeight ?? document.documentElement.clientHeight ?? screen.height;
+
+    const systemZoom = width / window.screen.availWidth;
+
+    const left = (width - 500) / 2 / systemZoom + dualScreenLeft;
+    const top = (height - 550) / 2 / systemZoom + dualScreenTop;
+
+    const newWindow = window.open(
+      '/google-signin',
+      'Dashboard Builder',
+      `width=${500 / systemZoom},height=${550 / systemZoom},top=${top},left=${left}`,
+    );
+
+    newWindow?.focus();
+  };
+  useEffect(() => {
+    if (session) {
+      router.push('/');
+    }
+  }, [session]);
   return (
     <Container>
       <AuthLayout>
@@ -59,7 +95,7 @@ export const Login = () => {
           <h1 className="font-bold text-3xl">Sign In</h1>
           <p className="text-xs">Sign in to your account</p>
         </div>
-        <button type="button" className={styles.button_custom} onClick={handleGoogleSignin}>
+        <button type="button" className={styles.button_custom} onClick={popupCenter}>
           <Image src={GoogleSvg.src} width="17" height={'17'} alt="Google" /> <Text>Sign In With Google</Text>
         </button>
         <form onSubmit={formik.handleSubmit} className=" rounded-lg shadow-lg bg-white flex flex-col space-y-2 p-6">
