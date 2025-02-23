@@ -4,7 +4,7 @@ import { LoaderSvg } from '../components';
 
 const GoogleSignInPage = () => {
   const { data: session, status } = useSession();
-  const [loading, setLoading] = useState(true);
+  const [loading] = useState(true);
 
   useEffect(() => {
     if (!(status === 'loading') && !session) {

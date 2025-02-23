@@ -17,7 +17,7 @@ import styles from '../../styles/Form.module.css';
 import { validateLoginInputs } from './helper';
 
 export const Login = () => {
-  const { data: session, status } = useSession();
+  const { data: session } = useSession();
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
@@ -53,14 +53,14 @@ export const Login = () => {
   //     redirect: true,
   //   });
   // };
-  const handleGoogleSignin = async () => {
-    // Call signIn and get the response
-    await signIn('google', {
-      callbackUrl: 'http://localhost:3000',
-      redirect: false, // Set redirect to false to get the sign-in URL without redirecting
-      intent: 'external', // Specify that the action should be treated as an external intent
-    });
-  };
+  // const handleGoogleSignin = async () => {
+  //   // Call signIn and get the response
+  //   await signIn('google', {
+  //     callbackUrl: 'http://localhost:3000',
+  //     redirect: false, // Set redirect to false to get the sign-in URL without redirecting
+  //     intent: 'external', // Specify that the action should be treated as an external intent
+  //   });
+  // };
 
   const popupCenter = () => {
     const dualScreenLeft = window.screenLeft ?? window.screenX;
